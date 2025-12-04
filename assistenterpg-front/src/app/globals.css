@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Tema CLARO (padrão) */
+:root {
+  /* tokens básicos */
+  --bg: #f9fafb;
+  --bg-surface: #ffffff;
+  --border-subtle: #e5e7eb;
+
+  --fg: #111827;
+  --fg-muted: #6b7280;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --secondary: #7c3aed;
+  --secondary-hover: #6d28d9;
+
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+}
+
+/* Tema ESCURO (aplicado quando tiver classe .dark no html/body) */
+.dark {
+  --bg: #0b1020;
+  --bg-surface: #151a2c;
+  --border-subtle: #1f2937;
+
+  --fg: #f5f7ff;
+  --fg-muted: #a5b1d8;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --secondary: #7c3aed;
+  --secondary-hover: #6d28d9;
+
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+}
+
+/* Mapeia tokens para nomes que o Tailwind entende */
+@theme inline {
+  --color-app-bg: var(--bg);
+  --color-app-surface: var(--bg-surface);
+  --color-app-border: var(--border-subtle);
+  --color-app-fg: var(--fg);
+  --color-app-muted: var(--fg-muted);
+  --color-app-primary: var(--primary);
+  --color-app-primary-hover: var(--primary-hover);
+  --color-app-secondary: var(--secondary);
+  --color-app-secondary-hover: var(--secondary-hover);
+  --color-app-danger: var(--danger);
+  --color-app-danger-hover: var(--danger-hover);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Estilo base do body usando os tokens */
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+}
